@@ -1,11 +1,5 @@
 package de.i3a.combobox;
 
-/*
- * 
- * @author: Becker, Johann
- * 
- */
-
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
@@ -45,7 +39,7 @@ public class ComboBox_innereKlasse<E> extends JFrame {
 		createMenu();
 		initComponents();
 		initEvents();
-		this.setJMenuBar(jmb);
+		
 		this.setVisible(true);
 	}
 
@@ -62,22 +56,25 @@ public class ComboBox_innereKlasse<E> extends JFrame {
 
 	private void createMenu(){
 		
-		jmb = new JMenuBar();
+		jmiBeenden = new JMenuItem("Beenden");
 		jmiRot = new JMenuItem("Rot");
 		jmiBlau = new JMenuItem("Blau");
 		jmiGelb = new JMenuItem("Gelb");
-		jmiBeenden = new JMenuItem("Beenden");
 		
 		JMenu jmenuDatei = new JMenu("Datei");
-		JMenu jmenuBearbeiten = new JMenu("Bearbeiten");
-		
 		jmenuDatei.add(jmiBeenden);
+
+		JMenu jmenuBearbeiten = new JMenu("Bearbeiten");
 		jmenuBearbeiten.add(jmiRot);
 		jmenuBearbeiten.add(jmiBlau);
 		jmenuBearbeiten.add(jmiGelb);
 		
+		jmb = new JMenuBar();
+
 		jmb.add(jmenuDatei);
 		jmb.add(jmenuBearbeiten);
+		
+		this.setJMenuBar(jmb);
 	}
 	
 	private void initComponents() {
