@@ -1,5 +1,11 @@
 package de.i3a.combobox;
 
+/*
+ * 
+ * @author: Becker, Johann
+ * 
+ */
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
